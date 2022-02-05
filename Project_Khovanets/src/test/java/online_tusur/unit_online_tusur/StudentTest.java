@@ -2,8 +2,13 @@ package online_tusur.unit_online_tusur;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -11,6 +16,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 public class StudentTest {
 	/* объект тестового класса Student */
 	private Student s = new Student();
+	private Student s1 = new Student();
+	private Student s2 = new Student();
 
 	/* Практическое задание 2 */
 
@@ -126,5 +133,51 @@ public class StudentTest {
 						argumentsAccessor.get(6, Integer.class)) };
 
 		assertEquals(expected, Student.avgAge(student));
+	}
+
+	/**************************************************************************/
+	/* Практическое задание 4 */
+
+	/* динамические тесты для геттера getLastName() */
+
+	@TestFactory
+	@Tag("positive")
+	Collection<DynamicTest> dynamicTestGetLastName() {
+		s.setLastName("Иванов");
+		s1.setLastName("Петрова-Сергеева");
+
+		return Arrays.asList(
+				DynamicTest.dynamicTest("Динамический тест getLastName(Иванов)",
+						() -> assertEquals("Иванов", s.getLastName())),
+				DynamicTest.dynamicTest("Динамический тест getLastName(Петрова-Сергеева)",
+						() -> assertEquals("Петрова-Сергеева", s1.getLastName())));
+	}
+
+	/* динамические тесты для геттера getFirstName() */
+
+	@TestFactory
+	@Tag("positive")
+	Collection<DynamicTest> dynamicTestGetFirstName() {
+		s.setFirstName("Иван");
+		s1.setFirstName("Алла-Виктория");
+
+		return Arrays.asList(
+				DynamicTest.dynamicTest("Динамический тест getFirstName(Иван)",
+						() -> assertEquals("Иван", s.getFirstName())),
+				DynamicTest.dynamicTest("Динамический тест getFirstName(Алла-Виктория)",
+						() -> assertEquals("Алла-Виктория", s1.getFirstName())));
+	}
+
+	/* динамические тесты для геттера getAge() */
+
+	@TestFactory
+	@Tag("positive")
+	Collection<DynamicTest> dynamicTestGetAge() {
+		s.setAge(18);
+		s1.setAge(50);
+
+		return Arrays.asList(
+				DynamicTest.dynamicTest("Динамический тест getAge(18)", () -> assertEquals(18, s.getAge())),
+				DynamicTest.dynamicTest("Динамический тест getAge(50)", () -> assertEquals(50, s1.getAge())));
 	}
 }
