@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<parameter name="students"
+			value="Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19"></parameter>
+		<parameter name="expectedAverAge" value="23"></parameter>
+
+		<classes>
+			<class name="online_tusur.unit_online_tusur.StudentTestNG" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
