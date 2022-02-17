@@ -4,7 +4,12 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class StudentTestNG {
+/* Практическое задание 5 */
+
+/* параметризированный тест для метода расчета среднего возраста avgAge() */
+
+public class StudentTestNGParam {
+	
 	@Test
 	@Parameters({ "expectedAverAge", "students" })
 	public void TestNG_AgeAvg(@Optional("25") int expectedAverAge, @Optional("Иван Иванов 20,Семен Семенов 30") String students) {

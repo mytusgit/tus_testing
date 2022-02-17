@@ -2,14 +2,24 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
-    <parameter name="averAge" value="25"/>
-    <parameter name="students" value="Ivan Ivanov 20, Semen Semenov 30"/>
+    <parameter name="expectedAverAge" value="23"/>
+    <parameter name="students" value="Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19"/>
     <classes>
-      <class name="online_tusur.unit_online_tusur.StudentTestNG">
+      <class name="online_tusur.unit_online_tusur.GetFirstNameTest">
         <methods>
-          <include name="params" invocation-numbers="0"/>
+          <include name="testNG_getFirstName" invocation-numbers="1"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.StudentTestNG -->
+      </class> <!-- online_tusur.unit_online_tusur.GetFirstNameTest -->
+      <class name="online_tusur.unit_online_tusur.GetAgeTest">
+        <methods>
+          <include name="testNG_getAge" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- online_tusur.unit_online_tusur.GetAgeTest -->
+      <class name="online_tusur.unit_online_tusur.GetLastNameTest">
+        <methods>
+          <include name="testNG_getLastName" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- online_tusur.unit_online_tusur.GetLastNameTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

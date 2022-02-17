@@ -3,11 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="online_tusur.unit_online_tusur.StudentTestNG">
+      <class name="online_tusur.unit_online_tusur.GetFirstNameTest">
         <methods>
-          <include name="TestNGData_AgeAvg" invocation-numbers="0 1"/>
+          <include name="testNG_getFirstName" invocation-numbers="1"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.StudentTestNG -->
+      </class> <!-- online_tusur.unit_online_tusur.GetFirstNameTest -->
+      <class name="online_tusur.unit_online_tusur.GetLastNameTest">
+        <methods>
+          <include name="testNG_getLastName" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- online_tusur.unit_online_tusur.GetLastNameTest -->
+      <class name="online_tusur.unit_online_tusur.GetAgeTest">
+        <methods>
+          <include name="testNG_getAge" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- online_tusur.unit_online_tusur.GetAgeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -17,7 +17,6 @@ public class StudentTest {
 	/* объект тестового класса Student */
 	private Student s = new Student();
 	private Student s1 = new Student();
-	private Student s2 = new Student();
 
 	/* Практическое задание 2 */
 

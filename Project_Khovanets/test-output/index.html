@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\Nadya\Курсы\Модульное тестирование программного обеспечения\Практическое задание 5\Project_Khovanets\testng.xml</span>
+                    <span>C:\Users\Nadya\Курсы\Модульное тестирование программного обеспечения\Практическое задание 6\Project_Khovanets\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">7 methods, 3 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.GetAgeTest" hash-for-method="testNG_getAge(50, online_tusur.unit_online_tusur.Student@6cc7b4de)">testNG_getAge(50, online_tusur.unit_online_tusur.Student@6cc7b4de)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.GetFirstNameTest" hash-for-method="testNG_getFirstName(Alla-Victoria, online_tusur.unit_online_tusur.Student@290dbf45)">testNG_getFirstName(Alla-Victoria, online_tusur.unit_online_tusur.Student@290dbf45)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.GetLastNameTest" hash-for-method="testNG_getLastName(Petrova-Sergeeva, online_tusur.unit_online_tusur.Student@11c20519)">testNG_getLastName(Petrova-Sergeeva, online_tusur.unit_online_tusur.Student@11c20519)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +128,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.StudentTestNG" hash-for-method="TestNG_AgeAvg(23, Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19)">TestNG_AgeAvg(23, Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.StudentTestNGParam" hash-for-method="TestNG_AgeAvg(23, Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19)">TestNG_AgeAvg(23, Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.GetAgeTest" hash-for-method="testNG_getAge(18, online_tusur.unit_online_tusur.Student@1efee8e7)">testNG_getAge(18, online_tusur.unit_online_tusur.Student@1efee8e7)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.GetFirstNameTest" hash-for-method="testNG_getFirstName(Ivan, online_tusur.unit_online_tusur.Student@799d4f69)">testNG_getFirstName(Ivan, online_tusur.unit_online_tusur.Student@799d4f69)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="online_tusur.unit_online_tusur.GetLastNameTest" hash-for-method="testNG_getLastName(Ivanov, online_tusur.unit_online_tusur.Student@2d127a61)">testNG_getLastName(Ivanov, online_tusur.unit_online_tusur.Student@2d127a61)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -119,10 +158,89 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">online_tusur.unit_online_tusur.GetFirstNameTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNG_getFirstName(Alla-Victoria, online_tusur.unit_online_tusur.Student@290dbf45)">
+                  </a> <!-- testNG_getFirstName(Alla-Victoria, online_tusur.unit_online_tusur.Student@290dbf45) -->
+                  <span class="method-name">testNG_getFirstName</span>
+                  <span class="parameters">(Alla-Victoria, online_tusur.unit_online_tusur.Student@290dbf45)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Alla-victoria] but found [Alla-Victoria]
+	at online_tusur.unit_online_tusur.GetFirstNameTest.testNG_getFirstName(StudentTestNGDynam.java:42)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">online_tusur.unit_online_tusur.GetAgeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNG_getAge(50, online_tusur.unit_online_tusur.Student@6cc7b4de)">
+                  </a> <!-- testNG_getAge(50, online_tusur.unit_online_tusur.Student@6cc7b4de) -->
+                  <span class="method-name">testNG_getAge</span>
+                  <span class="parameters">(50, online_tusur.unit_online_tusur.Student@6cc7b4de)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [18] but found [50]
+	at online_tusur.unit_online_tusur.GetAgeTest.testNG_getAge(StudentTestNGDynam.java:55)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">online_tusur.unit_online_tusur.GetLastNameTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNG_getLastName(Petrova-Sergeeva, online_tusur.unit_online_tusur.Student@11c20519)">
+                  </a> <!-- testNG_getLastName(Petrova-Sergeeva, online_tusur.unit_online_tusur.Student@11c20519) -->
+                  <span class="method-name">testNG_getLastName</span>
+                  <span class="parameters">(Petrova-Sergeeva, online_tusur.unit_online_tusur.Student@11c20519)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Petrova-sergeeva] but found [Petrova-Sergeeva]
+	at online_tusur.unit_online_tusur.GetLastNameTest.testNG_getLastName(StudentTestNGDynam.java:29)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">online_tusur.unit_online_tusur.StudentTestNG</span>
+              <span class="class-name">online_tusur.unit_online_tusur.GetFirstNameTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNG_getFirstName(Ivan, online_tusur.unit_online_tusur.Student@799d4f69)">
+                  </a> <!-- testNG_getFirstName(Ivan, online_tusur.unit_online_tusur.Student@799d4f69) -->
+                  <span class="method-name">testNG_getFirstName</span>
+                  <span class="parameters">(Ivan, online_tusur.unit_online_tusur.Student@799d4f69)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">online_tusur.unit_online_tusur.StudentTestNGParam</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -135,10 +253,42 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">online_tusur.unit_online_tusur.GetAgeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNG_getAge(18, online_tusur.unit_online_tusur.Student@1efee8e7)">
+                  </a> <!-- testNG_getAge(18, online_tusur.unit_online_tusur.Student@1efee8e7) -->
+                  <span class="method-name">testNG_getAge</span>
+                  <span class="parameters">(18, online_tusur.unit_online_tusur.Student@1efee8e7)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">online_tusur.unit_online_tusur.GetLastNameTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNG_getLastName(Ivanov, online_tusur.unit_online_tusur.Student@2d127a61)">
+                  </a> <!-- testNG_getLastName(Ivanov, online_tusur.unit_online_tusur.Student@2d127a61) -->
+                  <span class="method-name">testNG_getLastName</span>
+                  <span class="parameters">(Ivanov, online_tusur.unit_online_tusur.Student@2d127a61)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Nadya\Курсы\Модульное тестирование программного обеспечения\Практическое задание 5\Project_Khovanets\testng.xml</span>
+            <span class="header-content">C:\Users\Nadya\Курсы\Модульное тестирование программного обеспечения\Практическое задание 6\Project_Khovanets\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -149,7 +299,8 @@
     &lt;parameter name=&quot;expectedAverAge&quot; value=&quot;23&quot;/&gt;
     &lt;parameter name=&quot;students&quot; value=&quot;Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;online_tusur.unit_online_tusur.StudentTestNG&quot;/&gt;
+      &lt;class name=&quot;online_tusur.unit_online_tusur.StudentTestNGParam&quot;/&gt;
+      &lt;class name=&quot;online_tusur.unit_online_tusur.StudentTestNGDynam&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -163,7 +314,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -189,16 +340,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TestNG_AgeAvg')
-data.setCell(0, 2, 'online_tusur.unit_online_tusur.StudentTestNG')
-data.setCell(0, 3, 0);
+data.setCell(0, 2, 'online_tusur.unit_online_tusur.StudentTestNGParam')
+data.setCell(0, 3, 6);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testNG_getAge')
+data.setCell(1, 2, 'online_tusur.unit_online_tusur.GetAgeTest')
+data.setCell(1, 3, 2);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testNG_getFirstName')
+data.setCell(2, 2, 'online_tusur.unit_online_tusur.GetFirstNameTest')
+data.setCell(2, 3, 1);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testNG_getLastName')
+data.setCell(3, 2, 'online_tusur.unit_online_tusur.GetLastNameTest')
+data.setCell(3, 3, 1);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testNG_getLastName')
+data.setCell(4, 2, 'online_tusur.unit_online_tusur.GetLastNameTest')
+data.setCell(4, 3, 1);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testNG_getAge')
+data.setCell(5, 2, 'online_tusur.unit_online_tusur.GetAgeTest')
+data.setCell(5, 3, 1);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testNG_getFirstName')
+data.setCell(6, 2, 'online_tusur.unit_online_tusur.GetFirstNameTest')
+data.setCell(6, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 12 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -224,10 +399,49 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">online_tusur.unit_online_tusur.StudentTestNG</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">online_tusur.unit_online_tusur.StudentTestNGParam</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TestNG_AgeAvg(23, Иван Иванов 20,Семен Семенов 30,Алла-Виктория Петрова 19)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">online_tusur.unit_online_tusur.GetAgeTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testNG_getAge(18, online_tusur.unit_online_tusur.Student@1efee8e7)</span>
+                <span class="method-start">9 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testNG_getAge(50, online_tusur.unit_online_tusur.Student@6cc7b4de)</span>
+                <span class="method-start">12 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">online_tusur.unit_online_tusur.GetFirstNameTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testNG_getFirstName(Ivan, online_tusur.unit_online_tusur.Student@799d4f69)</span>
+                <span class="method-start">15 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testNG_getFirstName(Alla-Victoria, online_tusur.unit_online_tusur.Student@290dbf45)</span>
+                <span class="method-start">17 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">online_tusur.unit_online_tusur.GetLastNameTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testNG_getLastName(Ivanov, online_tusur.unit_online_tusur.Student@2d127a61)</span>
+                <span class="method-start">18 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testNG_getLastName(Petrova-Sergeeva, online_tusur.unit_online_tusur.Student@11c20519)</span>
+                <span class="method-start">19 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -8,7 +8,8 @@
 		<parameter name="expectedAverAge" value="23"></parameter>
 
 		<classes>
-			<class name="online_tusur.unit_online_tusur.StudentTestNG" />
+			<class name="online_tusur.unit_online_tusur.StudentTestNGParam" />
+			<class name="online_tusur.unit_online_tusur.StudentTestNGDynam" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
