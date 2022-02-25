@@ -9,10 +9,13 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.provider.CsvSource;
 
+@Execution(ExecutionMode.CONCURRENT)
 public class StudentTest {
 	/* объект тестового класса Student */
 	private Student s = new Student();
@@ -33,6 +36,10 @@ public class StudentTest {
 		s.setAge(age);
 		int expectedAge = 18;
 		int actualsAge = s.getAge();
+
+		long id = Thread.currentThread().getId();
+		System.out.println("JUnit тест. Tread id=" + id);
+
 		assertEquals(expectedAge, actualsAge);
 
 	}
@@ -48,6 +55,10 @@ public class StudentTest {
 		s.setAge(age);
 		int expectedAge = 18;
 		int actualsAge = s.getAge();
+
+		long id = Thread.currentThread().getId();
+		System.out.println("JUnit тест. Tread id=" + id);
+
 		assertEquals(expectedAge, actualsAge);
 
 	}
@@ -63,6 +74,10 @@ public class StudentTest {
 		s.setLastName(lname);
 		String expectedLastName = "Иванов";
 		String actualsLastName = s.getLastName();
+
+		long id = Thread.currentThread().getId();
+		System.out.println("JUnit тест. Tread id=" + id);
+
 		assertEquals(expectedLastName, actualsLastName);
 
 	}
@@ -80,6 +95,10 @@ public class StudentTest {
 		s.setFirstName(fname);
 		String expectedFirstName = "Иван";
 		String actualsFirstName = s.getFirstName();
+
+		long id = Thread.currentThread().getId();
+		System.out.println("JUnit тест. Tread id=" + id);
+
 		assertEquals(expectedFirstName, actualsFirstName);
 
 	}
@@ -95,6 +114,10 @@ public class StudentTest {
 		s.setLastName(lname);
 		String expectedLastName = "Иванов";
 		String actualsLastName = s.getLastName();
+
+		long id = Thread.currentThread().getId();
+		System.out.println("JUnit тест. Tread id=" + id);
+
 		assertEquals(expectedLastName, actualsLastName);
 
 	}
@@ -110,6 +133,10 @@ public class StudentTest {
 		s.setFirstName(fname);
 		String expectedFirstName = "Алла-Виктория";
 		String actualsFirstName = s.getFirstName();
+
+		long id = Thread.currentThread().getId();
+		System.out.println("JUnit тест. Tread id=" + id);
+
 		assertEquals(expectedFirstName, actualsFirstName);
 
 	}
@@ -131,6 +158,9 @@ public class StudentTest {
 				new Student(argumentsAccessor.get(4, String.class), argumentsAccessor.get(5, String.class),
 						argumentsAccessor.get(6, Integer.class)) };
 
+		long id = Thread.currentThread().getId();
+		System.out.println("Параметризированный JUnit тест. Tread id=" + id);
+
 		assertEquals(expected, Student.avgAge(student));
 	}
 
@@ -144,6 +174,9 @@ public class StudentTest {
 	Collection<DynamicTest> dynamicTestGetLastName() {
 		s.setLastName("Иванов");
 		s1.setLastName("Петрова-Сергеева");
+
+		long id = Thread.currentThread().getId();
+		System.out.println("Динамический JUnit тест. Tread id=" + id);
 
 		return Arrays.asList(
 				DynamicTest.dynamicTest("Динамический тест getLastName(Иванов)",
@@ -160,6 +193,9 @@ public class StudentTest {
 		s.setFirstName("Иван");
 		s1.setFirstName("Алла-Виктория");
 
+		long id = Thread.currentThread().getId();
+		System.out.println("Динамический JUnit тест. Tread id=" + id);
+
 		return Arrays.asList(
 				DynamicTest.dynamicTest("Динамический тест getFirstName(Иван)",
 						() -> assertEquals("Иван", s.getFirstName())),
@@ -174,6 +210,9 @@ public class StudentTest {
 	Collection<DynamicTest> dynamicTestGetAge() {
 		s.setAge(18);
 		s1.setAge(50);
+
+		long id = Thread.currentThread().getId();
+		System.out.println("Динамический JUnit тест. Tread id=" + id);
 
 		return Arrays.asList(
 				DynamicTest.dynamicTest("Динамический тест getAge(18)", () -> assertEquals(18, s.getAge())),

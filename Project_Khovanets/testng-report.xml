@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener
+			class-name="online_tusur.unit_online_tusur.CustomReporter"></listener>
+		<listener
+			class-name="online_tusur.unit_online_tusur.CustomListener"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="online_tusur.unit_online_tusur.StudentTestNGParam" />
+			<class name="online_tusur.unit_online_tusur.StudentTestNGDynam" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
