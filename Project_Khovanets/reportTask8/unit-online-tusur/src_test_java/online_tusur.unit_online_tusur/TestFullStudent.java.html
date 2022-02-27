@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>TestFullStudent.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestFullStudent (28.02.2022 4:54:25)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">TestFullStudent.java</span></div><h1>TestFullStudent.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Factory;
+import org.testng.annotations.Test;
+
+<span class="fc" id="L8">public class TestFullStudent {</span>
+
+<span class="fc" id="L10">	private Student s = new Student();</span>
+
+	@Factory
+	public Object[] TestFactory() {
+<span class="fc" id="L14">		return new Object[] { new GetFirstNameTest(), new GetLastNameTest(), new GetAgeTest(), new GetFullNameTest(),</span>
+<span class="fc" id="L15">				new AvgAgeTest(), new MinAgeTest(), new MaxAgeTest() };</span>
+	}
+
+<span class="fc" id="L18">	class GetLastNameTest {</span>
+		@DataProvider(name = &quot;lastNameProvider&quot;, parallel = true)
+		public Object[][] lastNameProvider() {
+<span class="fc" id="L21">			return new Object[][] { { &quot;Ivanov&quot;, &quot;i&quot; }, { &quot;Petrova-Sergeeva&quot;, &quot;Petrova-Sergeeva&quot; } };</span>
+		}
+
+		@Test(dataProvider = &quot;lastNameProvider&quot;, threadPoolSize = 3)
+		public void test_getLastName(String expLastName, String lastNamePar) {
+
+<span class="fc" id="L27">			s.setLastName(lastNamePar);</span>
+
+<span class="fc" id="L29">			long id = Thread.currentThread().getId();</span>
+<span class="fc" id="L30">			System.out.println(&quot;Тест getLastName(). Tread id=&quot; + id);</span>
+
+<span class="nc" id="L32">			Assert.assertEquals(expLastName, s.getLastName());</span>
+<span class="nc" id="L33">		}</span>
+	}
+
+<span class="fc" id="L36">	class GetFirstNameTest {</span>
+		@DataProvider(name = &quot;firstNameProvider&quot;, parallel = true)
+		public Object[][] firstNameProvider() {
+<span class="fc" id="L39">			return new Object[][] { { &quot;Ivan&quot;, new Student(&quot;i&quot;, &quot;Ivanov&quot;, 17) },</span>
+<span class="fc" id="L40">					{ &quot;Alla-Victoria&quot;, new Student(&quot;Alla-Victoria&quot;, &quot;Petrova-Sergeeva&quot;, 50) } };</span>
+		}
+
+		@Test(dataProvider = &quot;firstNameProvider&quot;, threadPoolSize = 3)
+		public void test_getFirstName(String expFirstName, Student student) {
+
+<span class="fc" id="L46">			long id = Thread.currentThread().getId();</span>
+<span class="fc" id="L47">			System.out.println(&quot;Тест getFirstName(). Tread id=&quot; + id);</span>
+
+<span class="nc" id="L49">			Assert.assertEquals(expFirstName, student.getFirstName());</span>
+<span class="nc" id="L50">		}</span>
+	}
+
+<span class="fc" id="L53">	class GetAgeTest {</span>
+		@DataProvider(name = &quot;ageProvider&quot;, parallel = true)
+		public Object[][] ageProvider() {
+<span class="fc" id="L56">			return new Object[][] { { 18, new Student(&quot;Ivan&quot;, &quot;Ivanov&quot;, 18) },</span>
+<span class="fc" id="L57">					{ 50, new Student(&quot;Alla-Victoria&quot;, &quot;Petrova-Sergeeva&quot;, 50) } };</span>
+		}
+
+		@Test(dataProvider = &quot;ageProvider&quot;, threadPoolSize = 3)
+		public void test_getAge(int expAge, Student student) {
+
+<span class="fc" id="L63">			long id = Thread.currentThread().getId();</span>
+<span class="fc" id="L64">			System.out.println(&quot;Тест getAge(). Tread id=&quot; + id);</span>
+
+<span class="fc" id="L66">			Assert.assertEquals(expAge, student.getAge());</span>
+<span class="fc" id="L67">		}</span>
+	}
+
+<span class="fc" id="L70">	class GetFullNameTest {</span>
+		@DataProvider(name = &quot;fullNameProvider&quot;, parallel = true)
+		public Object[][] fullNameProvider() {
+<span class="fc" id="L73">			return new Object[][] { { &quot;Ivanov Ivan&quot;, new Student(&quot;Ivan&quot;, &quot;Ivanov&quot;, 17) },</span>
+<span class="fc" id="L74">					{ &quot;Petrova-Sergeeva Alla-Victoria&quot;, new Student(&quot;Alla-Victoria&quot;, &quot;Petrova-Sergeeva&quot;, 50) } };</span>
+		}
+
+		@Test(dataProvider = &quot;fullNameProvider&quot;, threadPoolSize = 3)
+		public void test_fullName(String expFullName, Student student) {
+
+<span class="fc" id="L80">			long id = Thread.currentThread().getId();</span>
+<span class="fc" id="L81">			System.out.println(&quot;Тест getFullName(). Tread id=&quot; + id);</span>
+
+<span class="fc" id="L83">			Assert.assertEquals(expFullName, student.getFullName());</span>
+<span class="fc" id="L84">		}</span>
+	}
+
+<span class="fc" id="L87">	class AvgAgeTest {</span>
+		@DataProvider(name = &quot;avgAgeProvider&quot;, parallel = true)
+		public Object[][] avgAgeProvider() {
+<span class="fc" id="L90">			return new Object[][] { { 23, new Student[] { new Student(&quot;Иван&quot;, &quot;Иванов&quot;, 20),</span>
+<span class="fc" id="L91">					new Student(&quot;Семен&quot;, &quot;Семенов&quot;, 30), new Student(&quot;Алла-Виктория&quot;, &quot;Петрова&quot;, 19) } } };</span>
+		}
+
+		@Test(dataProvider = &quot;avgAgeProvider&quot;, threadPoolSize = 3)
+		public void avgAgeTest(int expAvgAge, Student[] students) {
+
+<span class="fc" id="L97">			long id = Thread.currentThread().getId();</span>
+<span class="fc" id="L98">			System.out.println(&quot;Тест avgAge(). Tread id=&quot; + id);</span>
+
+<span class="fc" id="L100">			Assert.assertEquals(expAvgAge, Student.avgAge(students));</span>
+<span class="fc" id="L101">		}</span>
+	}
+
+<span class="fc" id="L104">	class MinAgeTest {</span>
+		@DataProvider(name = &quot;minAgeProvider&quot;, parallel = true)
+		public Object[][] minAgeProvider() {
+<span class="fc" id="L107">			return new Object[][] { { 19, new Student[] { new Student(&quot;Иван&quot;, &quot;Иванов&quot;, 20),</span>
+<span class="fc" id="L108">					new Student(&quot;Семен&quot;, &quot;Семенов&quot;, 30), new Student(&quot;Алла-Виктория&quot;, &quot;Петрова&quot;, 19) } } };</span>
+		}
+
+		@Test(dataProvider = &quot;minAgeProvider&quot;, threadPoolSize = 3)
+		public void minAgeProvider(int expMinAge, Student[] students) {
+
+<span class="fc" id="L114">			long id = Thread.currentThread().getId();</span>
+<span class="fc" id="L115">			System.out.println(&quot;Тест minAge(). Tread id=&quot; + id);</span>
+
+<span class="fc" id="L117">			Assert.assertEquals(expMinAge, Student.minAge(students));</span>
+<span class="fc" id="L118">		}</span>
+	}
+
+<span class="fc" id="L121">	class MaxAgeTest {</span>
+		@DataProvider(name = &quot;maxAgeProvider&quot;, parallel = true)
+		public Object[][] maxAgeProvider() {
+<span class="fc" id="L124">			return new Object[][] { { 30, new Student[] { new Student(&quot;Иван&quot;, &quot;Иванов&quot;, 20),</span>
+<span class="fc" id="L125">					new Student(&quot;Семен&quot;, &quot;Семенов&quot;, 30), new Student(&quot;Алла-Виктория&quot;, &quot;Петрова&quot;, 19) } } };</span>
+		}
+
+		@Test(dataProvider = &quot;maxAgeProvider&quot;, threadPoolSize = 3)
+		public void maxAgeTest(int expMaxAge, Student[] students) {
+
+<span class="fc" id="L131">			long id = Thread.currentThread().getId();</span>
+<span class="fc" id="L132">			System.out.println(&quot;Тест maxAge(). Tread id=&quot; + id);</span>
+
+<span class="fc" id="L134">			Assert.assertEquals(expMaxAge, Student.maxAge(students));</span>
+<span class="fc" id="L135">		}</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>TestFullStudent (28.02.2022 4:54:25)</div></body></html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>CustomReporter.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestFullStudent (28.02.2022 4:54:25)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">CustomReporter.java</span></div><h1>CustomReporter.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+import java.util.List;
+import java.util.Map;
+ 
+import org.testng.IReporter;
+import org.testng.ISuite;
+import org.testng.ISuiteResult;
+import org.testng.ITestContext;
+import org.testng.xml.XmlSuite;
+ 
+<span class="nc" id="L12">public class CustomReporter implements IReporter{</span>
+    public void generateReport(List&lt;XmlSuite&gt; xmlSuites, List&lt;ISuite&gt; suites,String outputDirectory) {
+     
+        //Iterating over each suite included in the test
+<span class="nc bnc" id="L16" title="All 2 branches missed.">        for (ISuite suite : suites) {</span>
+  
+            //Following code gets the suite name
+<span class="nc" id="L19">            String suiteName = suite.getName();</span>
+  
+            //Getting the results for the said suite
+<span class="nc" id="L22">            Map&lt;String, ISuiteResult&gt; suiteResults = suite.getResults();</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">            for (ISuiteResult sr : suiteResults.values()) {</span>
+<span class="nc" id="L24">              ITestContext tc = sr.getTestContext();</span>
+<span class="nc" id="L25">              System.out.println(&quot;Всего тестов '&quot; + suiteName +</span>
+<span class="nc" id="L26">                      &quot;' is: &quot; + tc.getSuite().getAllMethods().size());</span>
+<span class="nc" id="L27">              System.out.println(&quot;Пройденные тесты '&quot; + suiteName +</span>
+<span class="nc" id="L28">                &quot;' is: &quot; + tc.getPassedTests().getAllResults().size());</span>
+<span class="nc" id="L29">              System.out.println(&quot;Упавшие тесты '&quot; + suiteName +</span>
+<span class="nc" id="L30">                &quot;' is: &quot; + tc.getFailedTests().getAllResults().size());</span>
+<span class="nc" id="L31">              System.out.println(&quot;Пропущенные тесты '&quot; + suiteName +</span>
+<span class="nc" id="L32">                &quot;' is: &quot; + tc.getSkippedTests().getAllResults().size());</span>
+            }
+        }
+<span class="nc" id="L35">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>TestFullStudent (28.02.2022 4:54:25)</div></body></html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Student.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestFullStudent (28.02.2022 4:54:25)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">Student.java</span></div><h1>Student.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+class Student {
+//поля класса
+	private String firstName;
+	private String lastName;
+	private int age;
+
+//конструктор с аргументами
+<span class="fc" id="L10">	public Student(String firstName, String lastName, int age) {</span>
+<span class="fc" id="L11">		setFirstName(firstName);</span>
+<span class="fc" id="L12">		setLastName(lastName);</span>
+<span class="fc" id="L13">		setAge(age);</span>
+<span class="fc" id="L14">	}</span>
+
+//конструктор по умолчанию
+<span class="fc" id="L17">	public Student() {</span>
+<span class="fc" id="L18">	}</span>
+
+//геттеры и сеттеры
+	public String getFirstName() {
+<span class="fc" id="L22">		return firstName;</span>
+	}
+
+	public void setFirstName(String firstName) {
+<span class="fc bfc" id="L26" title="All 2 branches covered.">		if (firstName.length() &gt; 1) {</span>
+<span class="fc" id="L27">			this.firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();</span>
+<span class="fc" id="L28">		} else {</span>
+<span class="fc" id="L29">			this.firstName = firstName.toUpperCase();</span>
+		}
+
+<span class="fc" id="L32">	}</span>
+
+	public String getLastName() {
+<span class="fc" id="L35">		return lastName;</span>
+	}
+
+	public void setLastName(String lastName) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">		if (lastName.length() &gt; 1) {</span>
+<span class="fc" id="L40">			this.lastName = Character.toUpperCase(lastName.charAt(0)) + lastName.substring(1).toLowerCase();</span>
+<span class="fc" id="L41">		} else {</span>
+<span class="fc" id="L42">			this.lastName = lastName;</span>
+		}
+<span class="fc" id="L44">	}</span>
+
+	public int getAge() {
+<span class="fc" id="L47">		return age;</span>
+	}
+
+	public void setAge(int age) {
+<span class="fc bfc" id="L51" title="All 4 branches covered.">		this.age = age &gt; 17 &amp;&amp; age &lt; 50 ? age : 18;</span>
+<span class="fc" id="L52">	}</span>
+
+	public String getFullName() {
+<span class="fc" id="L55">		return getLastName() + &quot; &quot; + getFirstName();</span>
+	}
+
+//метод для расчета среднего возраста
+	public static int avgAge(Student[] array) {
+<span class="fc" id="L60">		int avg = 0;</span>
+<span class="fc" id="L61">		int ageSum = 0;</span>
+
+<span class="fc bfc" id="L63" title="All 2 branches covered.">		for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc" id="L64">			ageSum += array[i].age;</span>
+		}
+<span class="fc" id="L66">		avg = ageSum / array.length;</span>
+
+<span class="fc" id="L68">		return avg;</span>
+	}
+
+//метод для расчета минимального возраста
+	public static int minAge(Student[] array) {
+
+<span class="fc" id="L74">		int min = 100; // текущий минимальный возраст</span>
+
+<span class="fc bfc" id="L76" title="All 2 branches covered.">		for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">			if (array[i].getAge() &lt; min) {</span>
+<span class="fc" id="L78">				min = array[i].getAge();</span>
+			}
+
+		}
+<span class="fc" id="L82">		return min;</span>
+	}
+
+//метод для расчета максимального возраста
+	public static int maxAge(Student[] array) {
+
+<span class="fc" id="L88">		int max = 0; // текущий максимальный возраст</span>
+
+<span class="fc bfc" id="L90" title="All 2 branches covered.">		for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">			if (array[i].getAge() &gt; max) {</span>
+<span class="fc" id="L92">				max = array[i].getAge();</span>
+			}
+
+		}
+<span class="fc" id="L96">		return max;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>TestFullStudent (28.02.2022 4:54:25)</div></body></html>

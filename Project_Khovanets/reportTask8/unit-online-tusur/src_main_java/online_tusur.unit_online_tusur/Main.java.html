@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestFullStudent (28.02.2022 4:54:25)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+import online_tusur.unit_online_tusur.Student;
+
+import java.util.Arrays;
+
+
+<span class="nc" id="L7">public class Main {</span>
+
+	//главный метод класса
+		public static void main(String[] args) {
+			// s1, s2, s3 - объекты класса Student
+<span class="nc" id="L12">			Student s1 = new Student();</span>
+<span class="nc" id="L13">			s1.setFirstName(&quot;Ivan&quot;);</span>
+<span class="nc" id="L14">			s1.setLastName(&quot;SIDORov&quot;);</span>
+<span class="nc" id="L15">			s1.setAge(25);</span>
+						
+<span class="nc" id="L17">			Student s2 = new Student(&quot;Ivan&quot;, &quot;nIkulin&quot;, 87);</span>
+			
+<span class="nc" id="L19">			Student s3 = new Student(&quot;kONStantin&quot;,&quot;petrov&quot;, 33);</span>
+			
+<span class="nc" id="L21">			System.out.println(s1.getFullName() + &quot;, &quot; + s1.getAge());</span>
+<span class="nc" id="L22">			System.out.println(s2.getFullName() + &quot;, &quot; + s2.getAge());</span>
+<span class="nc" id="L23">			System.out.println(s3.getFullName() + &quot;, &quot; + s3.getAge());</span>
+			
+			
+<span class="nc" id="L26">			Student[] students = { s1,s2,s3};</span>
+<span class="nc" id="L27">			  Student[] students2 = {new Student(&quot;Alexandr&quot;, &quot;Ivanov&quot;, 20), new Student(&quot;Vladimir&quot;, &quot;Petrov&quot;, 18),</span>
+<span class="nc" id="L28">						new Student(&quot;Aleksey&quot;, &quot;Alekseev&quot;, 35)};</span>
+			
+<span class="nc" id="L30">			System.out.println(&quot;AVG= &quot;+Student.avgAge(students2));</span>
+<span class="nc" id="L31">			System.out.println(&quot;MAX= &quot;+Student.maxAge(students));</span>
+<span class="nc" id="L32">			System.out.println(&quot;MIN= &quot;+Student.minAge(students));</span>
+			
+			
+		   
+<span class="nc" id="L36">		}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>TestFullStudent (28.02.2022 4:54:25)</div></body></html>

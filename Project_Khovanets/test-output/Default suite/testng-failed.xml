@@ -3,21 +3,26 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="online_tusur.unit_online_tusur.GetFirstNameTest">
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetFullNameTest">
         <methods>
-          <include name="testNG_getFirstName" invocation-numbers="1"/>
+          <include name="test_fullName" invocation-numbers="1"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.GetFirstNameTest -->
-      <class name="online_tusur.unit_online_tusur.GetLastNameTest">
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetFullNameTest -->
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetAgeTest">
         <methods>
-          <include name="testNG_getLastName" invocation-numbers="1"/>
+          <include name="test_getAge" invocation-numbers="1"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.GetLastNameTest -->
-      <class name="online_tusur.unit_online_tusur.GetAgeTest">
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetAgeTest -->
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetFirstNameTest">
         <methods>
-          <include name="testNG_getAge" invocation-numbers="1"/>
+          <include name="test_getFirstName" invocation-numbers="1 0"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.GetAgeTest -->
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetFirstNameTest -->
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetLastNameTest">
+        <methods>
+          <include name="test_getLastName" invocation-numbers="1 0"/>
+        </methods>
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetLastNameTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

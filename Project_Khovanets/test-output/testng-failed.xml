@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="online_tusur.unit_online_tusur.CustomReporter"/>
-    <listener class-name="online_tusur.unit_online_tusur.CustomListener"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="online_tusur.unit_online_tusur.GetLastNameTest">
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetFullNameTest">
         <methods>
-          <include name="testNG_getLastName" invocation-numbers="1"/>
+          <include name="test_fullName" invocation-numbers="1"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.GetLastNameTest -->
-      <class name="online_tusur.unit_online_tusur.GetFirstNameTest">
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetFullNameTest -->
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetAgeTest">
         <methods>
-          <include name="testNG_getFirstName" invocation-numbers="1"/>
+          <include name="test_getAge" invocation-numbers="1"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.GetFirstNameTest -->
-      <class name="online_tusur.unit_online_tusur.GetAgeTest">
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetAgeTest -->
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetFirstNameTest">
         <methods>
-          <include name="testNG_getAge" invocation-numbers="1"/>
+          <include name="test_getFirstName" invocation-numbers="1 0"/>
         </methods>
-      </class> <!-- online_tusur.unit_online_tusur.GetAgeTest -->
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetFirstNameTest -->
+      <class name="online_tusur.unit_online_tusur.TestFullStudent$GetLastNameTest">
+        <methods>
+          <include name="test_getLastName" invocation-numbers="1 0"/>
+        </methods>
+      </class> <!-- online_tusur.unit_online_tusur.TestFullStudent$GetLastNameTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

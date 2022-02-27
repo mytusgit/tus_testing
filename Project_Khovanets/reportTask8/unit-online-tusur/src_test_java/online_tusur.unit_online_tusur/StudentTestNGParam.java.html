@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>StudentTestNGParam.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestFullStudent (28.02.2022 4:54:25)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">StudentTestNGParam.java</span></div><h1>StudentTestNGParam.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+/* Практическое задание 5 */
+
+/* параметризированный тест для метода расчета среднего возраста avgAge() */
+
+<span class="nc bnc" id="L12" title="All 2 branches missed.">public class StudentTestNGParam {</span>
+
+	@DataProvider(name = &quot;students&quot;, parallel = true)
+	public Object[][] parameterProvider() {
+<span class="nc" id="L16">		return new Object[][] { { 23, new Student[] { new Student(&quot;Иван&quot;, &quot;Иванов&quot;, 20),</span>
+<span class="nc" id="L17">				new Student(&quot;Семен&quot;, &quot;Семенов&quot;, 30), new Student(&quot;Алла-Виктория&quot;, &quot;Петрова&quot;, 19) } } };</span>
+	}
+
+	@Test(dataProvider = &quot;students&quot;, threadPoolSize = 3)
+	public void avgAgeTest(int expected, Student[] students) {
+
+<span class="nc" id="L23">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L24">		System.out.println(&quot;Параметризированный TestNG тест с провайдером. Tread id=&quot; + id);</span>
+
+<span class="nc bnc" id="L26" title="All 4 branches missed.">		assert expected == Student.avgAge(students);</span>
+<span class="nc" id="L27">	}</span>
+
+	@Test
+	@Parameters({ &quot;expectedAverAge&quot;, &quot;students&quot; })
+	public void TestNG_AgeAvg(@Optional(&quot;25&quot;) int expectedAverAge,
+			@Optional(&quot;Иван Иванов 20,Семен Семенов 30&quot;) String students) {
+<span class="nc" id="L33">		String[] studentArr = students.split(&quot;,&quot;);</span>
+<span class="nc" id="L34">		Student[] arrOfStudent = new Student[studentArr.length];</span>
+
+<span class="nc bnc" id="L36" title="All 2 branches missed.">		for (int i = 0; i &lt; studentArr.length; i++) {</span>
+<span class="nc" id="L37">			arrOfStudent[i] = new Student();</span>
+<span class="nc" id="L38">			String[] studInf = studentArr[i].split(&quot; &quot;);</span>
+
+<span class="nc" id="L40">			arrOfStudent[i].setFirstName(studInf[0]);</span>
+<span class="nc" id="L41">			arrOfStudent[i].setLastName(studInf[1]);</span>
+<span class="nc" id="L42">			arrOfStudent[i].setAge(Integer.parseInt(studInf[2]));</span>
+		}
+
+<span class="nc" id="L45">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L46">		System.out.println(&quot;Параметризированный TestNG тест. Tread id=&quot; + id);</span>
+
+<span class="nc bnc" id="L48" title="All 4 branches missed.">		assert expectedAverAge == Student.avgAge(arrOfStudent);</span>
+<span class="nc" id="L49">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>TestFullStudent (28.02.2022 4:54:25)</div></body></html>

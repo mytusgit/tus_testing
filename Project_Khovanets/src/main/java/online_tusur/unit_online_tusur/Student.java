@@ -1,6 +1,6 @@
 package online_tusur.unit_online_tusur;
 
- class Student {
+class Student {
 //поля класса
 	private String firstName;
 	private String lastName;
@@ -27,9 +27,9 @@ package online_tusur.unit_online_tusur;
 			this.firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
 		} else {
 			this.firstName = firstName.toUpperCase();
-			}
-		
-		 	}
+		}
+
+	}
 
 	public String getLastName() {
 		return lastName;
@@ -56,44 +56,44 @@ package online_tusur.unit_online_tusur;
 	}
 
 //метод для расчета среднего возраста
-public static int avgAge(Student [] array) {
+	public static int avgAge(Student[] array) {
 		int avg = 0;
-		int ageSum=0;
-		
+		int ageSum = 0;
+
 		for (int i = 0; i < array.length; i++) {
 			ageSum += array[i].age;
 		}
-		avg= ageSum / array.length;
-		
+		avg = ageSum / array.length;
+
 		return avg;
 	}
-	
-//метод для расчета минимального возраста
-public static int minAge(Student [] array) {
 
-	int min=100;		// текущий минимальный возраст 
-	
-	for (int i=0; i < array.length; i++){
-			if (array[i].getAge() < min) { 
+//метод для расчета минимального возраста
+	public static int minAge(Student[] array) {
+
+		int min = 100; // текущий минимальный возраст
+
+		for (int i = 0; i < array.length; i++) {
+			if (array[i].getAge() < min) {
 				min = array[i].getAge();
 			}
-		
-	}
-		return min;
+
 		}
-		
+		return min;
+	}
+
 //метод для расчета максимального возраста
-public static int maxAge(Student [] array) {
+	public static int maxAge(Student[] array) {
 
-int max=0; // текущий максимальный возраст
+		int max = 0; // текущий максимальный возраст
 
-for (int i=0; i < array.length; i++){
-if (array[i].getAge() > max) {
-max = array[i].getAge();
-}
+		for (int i = 0; i < array.length; i++) {
+			if (array[i].getAge() > max) {
+				max = array[i].getAge();
+			}
 
-}
-return max;
-}
-		
+		}
+		return max;
+	}
+
 }

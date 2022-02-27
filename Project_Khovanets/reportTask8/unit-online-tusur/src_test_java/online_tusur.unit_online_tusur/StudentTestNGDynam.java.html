@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>StudentTestNGDynam.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestFullStudent (28.02.2022 4:54:25)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">StudentTestNGDynam.java</span></div><h1>StudentTestNGDynam.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Factory;
+import org.testng.annotations.Test;
+
+/* Практическое задание 6 */
+
+/* тесты для геттеров getLastName(), getFirstName(), getAge() */
+
+<span class="nc" id="L12">public class StudentTestNGDynam {</span>
+
+	@Factory
+	public Object[] TestFactory() {
+<span class="nc" id="L16">		return new Object[] { new GetFirstNameTest(), new GetLastNameTest(), new GetAgeTest() };</span>
+	}
+}
+
+<span class="nc" id="L20">class GetLastNameTest {</span>
+	@DataProvider(name = &quot;lastNameProvider&quot;, parallel = true)
+	public Object[][] lastNameProvider() {
+<span class="nc" id="L23">		return new Object[][] { { &quot;Ivanov&quot;, new Student(&quot;Ivan&quot;, &quot;Ivanov&quot;, 18) },</span>
+<span class="nc" id="L24">				{ &quot;Petrova-Sergeeva&quot;, new Student(&quot;Alla-Victoria&quot;, &quot;Petrova-Sergeeva&quot;, 50) } };</span>
+	}
+
+	@Test(dataProvider = &quot;lastNameProvider&quot;, threadPoolSize = 3)
+	public void testNG_getLastName(String expLastName, Student student1) {
+
+<span class="nc" id="L30">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L31">		System.out.println(&quot;Динамический TestNG тест getLastName(). Tread id=&quot; + id);</span>
+
+<span class="nc" id="L33">		Assert.assertEquals(expLastName, student1.getLastName());</span>
+<span class="nc" id="L34">	}</span>
+}
+
+<span class="nc" id="L37">class GetFirstNameTest {</span>
+	@DataProvider(name = &quot;firstNameProvider&quot;, parallel = true)
+	public Object[][] firstNameProvider() {
+<span class="nc" id="L40">		return new Object[][] { { &quot;Ivan&quot;, new Student(&quot;Ivan&quot;, &quot;Ivanov&quot;, 18) },</span>
+<span class="nc" id="L41">				{ &quot;Alla-Victoria&quot;, new Student(&quot;Alla-Victoria&quot;, &quot;Petrova-Sergeeva&quot;, 50) } };</span>
+	}
+
+	@Test(dataProvider = &quot;firstNameProvider&quot;, threadPoolSize = 3)
+	public void testNG_getFirstName(String expFirstName, Student student2) {
+
+<span class="nc" id="L47">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L48">		System.out.println(&quot;Динамический TestNG тест getFirstName(). Tread id=&quot; + id);</span>
+
+<span class="nc" id="L50">		Assert.assertEquals(expFirstName, student2.getFirstName());</span>
+<span class="nc" id="L51">	}</span>
+}
+
+<span class="nc" id="L54">class GetAgeTest {</span>
+	@DataProvider(name = &quot;ageProvider&quot;, parallel = true)
+	public Object[][] ageProvider() {
+<span class="nc" id="L57">		return new Object[][] { { 18, new Student(&quot;Ivan&quot;, &quot;Ivanov&quot;, 18) },</span>
+<span class="nc" id="L58">				{ 50, new Student(&quot;Alla-Victoria&quot;, &quot;Petrova-Sergeeva&quot;, 50) } };</span>
+	}
+
+	@Test(dataProvider = &quot;ageProvider&quot;, threadPoolSize = 3)
+	public void testNG_getAge(int expAge, Student student3) {
+
+<span class="nc" id="L64">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L65">		System.out.println(&quot;Динамический TestNG тест getAge(). Tread id=&quot; + id);</span>
+
+<span class="nc" id="L67">		Assert.assertEquals(expAge, student3.getAge());</span>
+<span class="nc" id="L68">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>TestFullStudent (28.02.2022 4:54:25)</div></body></html>

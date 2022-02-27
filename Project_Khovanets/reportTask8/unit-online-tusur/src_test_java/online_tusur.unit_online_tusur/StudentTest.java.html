@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>StudentTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestFullStudent (28.02.2022 4:54:25)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">StudentTest.java</span></div><h1>StudentTest.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
+import org.junit.jupiter.params.provider.CsvSource;
+
+@Execution(ExecutionMode.CONCURRENT)
+<span class="nc" id="L19">public class StudentTest {</span>
+	/* объект тестового класса Student */
+<span class="nc" id="L21">	private Student s = new Student();</span>
+<span class="nc" id="L22">	private Student s1 = new Student();</span>
+
+	/* Практическое задание 2 */
+
+	/* негативные тесты */
+
+	/*
+	 * 1. проверка возраста студента, выходящего за нижнюю границу диапазона
+	 */
+
+	@Test
+	@Tag(&quot;negative&quot;)
+	void testAgeInvalid_lowRange() {
+<span class="nc" id="L35">		int age = 17;</span>
+<span class="nc" id="L36">		s.setAge(age);</span>
+<span class="nc" id="L37">		int expectedAge = 18;</span>
+<span class="nc" id="L38">		int actualsAge = s.getAge();</span>
+
+<span class="nc" id="L40">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L41">		System.out.println(&quot;JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L43">		assertEquals(expectedAge, actualsAge);</span>
+
+<span class="nc" id="L45">	}</span>
+
+	/*
+	 * 2. проверка возраста студента, выходящего за верхнюю границу диапазона
+	 */
+
+	@Test
+	@Tag(&quot;negative&quot;)
+	void testAgeInvalid_upRange() {
+<span class="nc" id="L54">		int age = 51;</span>
+<span class="nc" id="L55">		s.setAge(age);</span>
+<span class="nc" id="L56">		int expectedAge = 18;</span>
+<span class="nc" id="L57">		int actualsAge = s.getAge();</span>
+
+<span class="nc" id="L59">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L60">		System.out.println(&quot;JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L62">		assertEquals(expectedAge, actualsAge);</span>
+
+<span class="nc" id="L64">	}</span>
+
+	/*
+	 * 3. проверка фамилии, введённой с маленькой буквы
+	 */
+
+	@Test
+	@Tag(&quot;negative&quot;)
+	void testInvalid_lastName() {
+<span class="nc" id="L73">		String lname = &quot;иванов&quot;;</span>
+<span class="nc" id="L74">		s.setLastName(lname);</span>
+<span class="nc" id="L75">		String expectedLastName = &quot;Иванов&quot;;</span>
+<span class="nc" id="L76">		String actualsLastName = s.getLastName();</span>
+
+<span class="nc" id="L78">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L79">		System.out.println(&quot;JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L81">		assertEquals(expectedLastName, actualsLastName);</span>
+
+<span class="nc" id="L83">	}</span>
+
+	/* позитивные тесты */
+
+	/*
+	 * 1. проверка корректного имени студента
+	 */
+
+	@Test
+	@Tag(&quot;positive&quot;)
+	void testFirstName() {
+<span class="nc" id="L94">		String fname = &quot;Иван&quot;;</span>
+<span class="nc" id="L95">		s.setFirstName(fname);</span>
+<span class="nc" id="L96">		String expectedFirstName = &quot;Иван&quot;;</span>
+<span class="nc" id="L97">		String actualsFirstName = s.getFirstName();</span>
+
+<span class="nc" id="L99">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L100">		System.out.println(&quot;JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L102">		assertEquals(expectedFirstName, actualsFirstName);</span>
+
+<span class="nc" id="L104">	}</span>
+
+	/*
+	 * 2. проверка корректной фамилии студента
+	 */
+
+	@Test
+	@Tag(&quot;positive&quot;)
+	void testLastName() {
+<span class="nc" id="L113">		String lname = &quot;Иванов&quot;;</span>
+<span class="nc" id="L114">		s.setLastName(lname);</span>
+<span class="nc" id="L115">		String expectedLastName = &quot;Иванов&quot;;</span>
+<span class="nc" id="L116">		String actualsLastName = s.getLastName();</span>
+
+<span class="nc" id="L118">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L119">		System.out.println(&quot;JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L121">		assertEquals(expectedLastName, actualsLastName);</span>
+
+<span class="nc" id="L123">	}</span>
+
+	/*
+	 * 3. проверка двойного имени
+	 */
+
+	@Test
+	@Tag(&quot;positive&quot;)
+	void testFirstName_double() {
+<span class="nc" id="L132">		String fname = &quot;Алла-Виктория&quot;;</span>
+<span class="nc" id="L133">		s.setFirstName(fname);</span>
+<span class="nc" id="L134">		String expectedFirstName = &quot;Алла-Виктория&quot;;</span>
+<span class="nc" id="L135">		String actualsFirstName = s.getFirstName();</span>
+
+<span class="nc" id="L137">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L138">		System.out.println(&quot;JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L140">		assertEquals(expectedFirstName, actualsFirstName);</span>
+
+<span class="nc" id="L142">	}</span>
+
+	/**************************************************************************/
+	/* Практическое задание 3 */
+
+	/* параметризированный тест для метода расчета среднего возраста avgAge() */
+
+	@ParameterizedTest
+	@Tag(&quot;positive&quot;)
+	@CsvSource({ &quot;25, Иван, Иванов, 20, Семен, Семенов, 30&quot; })
+	void test_avgAge(ArgumentsAccessor argumentsAccessor) {
+
+<span class="nc" id="L154">		int expected = argumentsAccessor.get(0, Integer.class);</span>
+<span class="nc" id="L155">		Student[] student = {</span>
+<span class="nc" id="L156">				new Student(argumentsAccessor.get(1, String.class), argumentsAccessor.get(2, String.class),</span>
+<span class="nc" id="L157">						argumentsAccessor.get(3, Integer.class)),</span>
+<span class="nc" id="L158">				new Student(argumentsAccessor.get(4, String.class), argumentsAccessor.get(5, String.class),</span>
+<span class="nc" id="L159">						argumentsAccessor.get(6, Integer.class)) };</span>
+
+<span class="nc" id="L161">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L162">		System.out.println(&quot;Параметризированный JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L164">		assertEquals(expected, Student.avgAge(student));</span>
+<span class="nc" id="L165">	}</span>
+
+	/**************************************************************************/
+	/* Практическое задание 4 */
+
+	/* динамические тесты для геттера getLastName() */
+
+	@TestFactory
+	@Tag(&quot;positive&quot;)
+	Collection&lt;DynamicTest&gt; dynamicTestGetLastName() {
+<span class="nc" id="L175">		s.setLastName(&quot;Иванов&quot;);</span>
+<span class="nc" id="L176">		s1.setLastName(&quot;Петрова-Сергеева&quot;);</span>
+
+<span class="nc" id="L178">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L179">		System.out.println(&quot;Динамический JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L181">		return Arrays.asList(</span>
+<span class="nc" id="L182">				DynamicTest.dynamicTest(&quot;Динамический тест getLastName(Иванов)&quot;,</span>
+<span class="nc" id="L183">						() -&gt; assertEquals(&quot;Иванов&quot;, s.getLastName())),</span>
+<span class="nc" id="L184">				DynamicTest.dynamicTest(&quot;Динамический тест getLastName(Петрова-Сергеева)&quot;,</span>
+<span class="nc" id="L185">						() -&gt; assertEquals(&quot;Петрова-Сергеева&quot;, s1.getLastName())));</span>
+	}
+
+	/* динамические тесты для геттера getFirstName() */
+
+	@TestFactory
+	@Tag(&quot;positive&quot;)
+	Collection&lt;DynamicTest&gt; dynamicTestGetFirstName() {
+<span class="nc" id="L193">		s.setFirstName(&quot;Иван&quot;);</span>
+<span class="nc" id="L194">		s1.setFirstName(&quot;Алла-Виктория&quot;);</span>
+
+<span class="nc" id="L196">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L197">		System.out.println(&quot;Динамический JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L199">		return Arrays.asList(</span>
+<span class="nc" id="L200">				DynamicTest.dynamicTest(&quot;Динамический тест getFirstName(Иван)&quot;,</span>
+<span class="nc" id="L201">						() -&gt; assertEquals(&quot;Иван&quot;, s.getFirstName())),</span>
+<span class="nc" id="L202">				DynamicTest.dynamicTest(&quot;Динамический тест getFirstName(Алла-Виктория)&quot;,</span>
+<span class="nc" id="L203">						() -&gt; assertEquals(&quot;Алла-Виктория&quot;, s1.getFirstName())));</span>
+	}
+
+	/* динамические тесты для геттера getAge() */
+
+	@TestFactory
+	@Tag(&quot;positive&quot;)
+	Collection&lt;DynamicTest&gt; dynamicTestGetAge() {
+<span class="nc" id="L211">		s.setAge(18);</span>
+<span class="nc" id="L212">		s1.setAge(50);</span>
+
+<span class="nc" id="L214">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L215">		System.out.println(&quot;Динамический JUnit тест. Tread id=&quot; + id);</span>
+
+<span class="nc" id="L217">		return Arrays.asList(</span>
+<span class="nc" id="L218">				DynamicTest.dynamicTest(&quot;Динамический тест getAge(18)&quot;, () -&gt; assertEquals(18, s.getAge())),</span>
+<span class="nc" id="L219">				DynamicTest.dynamicTest(&quot;Динамический тест getAge(50)&quot;, () -&gt; assertEquals(50, s1.getAge())));</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>TestFullStudent (28.02.2022 4:54:25)</div></body></html>
