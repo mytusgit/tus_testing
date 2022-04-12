@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-api-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-api-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-chrome-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-chrome-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-chromium-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-chromium-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v85-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v85-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v95-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v95-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v96-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v96-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v97-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-devtools-v97-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-edge-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-edge-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-firefox-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-firefox-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-firefox-xpi-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-firefox-xpi-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-http-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-http-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-ie-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-ie-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-java-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-java-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-json-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-json-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-opera-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-opera-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-remote-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-remote-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-safari-driver-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-safari-driver-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-server-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-support-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/selenium-support-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/async-http-client-2.12.3.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/async-http-client-netty-utils-2.12.3.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/auto-common-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/auto-service-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/auto-service-annotations-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/byte-buddy-1.12.7.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/checker-qual-3.12.0.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/error_prone_annotations-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/failsafe-2.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/failureaccess-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/guava-31.0.1-jre.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/j2objc-annotations-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/jakarta.activation-1.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/jcommander-1.82.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/jtoml-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-buffer-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-codec-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-codec-http-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-codec-socks-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-common-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-handler-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-handler-proxy-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-reactive-streams-2.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-resolver-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-tcnative-classes-2.0.46.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-transport-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-transport-classes-epoll-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-transport-classes-kqueue-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-transport-native-epoll-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-transport-native-kqueue-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/netty-transport-native-unix-common-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-api-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-context-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-exporter-logging-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-sdk-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-sdk-common-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-sdk-extension-autoconfigure-1.10.1-alpha.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-sdk-extension-autoconfigure-spi-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-sdk-logs-1.10.1-alpha.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-sdk-metrics-1.10.1-alpha.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-sdk-trace-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/opentelemetry-semconv-1.10.1-alpha.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/reactive-streams-1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/lib/slf4j-api-1.7.35.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/libb/netty-transport-native-epoll-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/seleniumgrid/libb/netty-transport-native-kqueue-4.1.73.Final.jar"/>
+	<classpathentry kind="lib" path="C:/allure/allure-junit5-2.15.0.jar"/>
+	<classpathentry kind="lib" path="C:/allure/allure-maven-2.10.0.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

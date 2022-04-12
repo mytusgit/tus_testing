@@ -1,0 +1,74 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestTriangle",
+    "children" : [ {
+      "name" : "testEmptyField()",
+      "uid" : "1b40980520f8c5a3",
+      "parentUid" : "9a9b644cc0e399ad2cf2b7e618d060e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649776300181,
+        "stop" : 1649776302634,
+        "duration" : 2453
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testRightScaleneTriangle()",
+      "uid" : "83624b3f3dc22f5a",
+      "parentUid" : "9a9b644cc0e399ad2cf2b7e618d060e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649776302730,
+        "stop" : 1649776304163,
+        "duration" : 1433
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testNotExistTriangle()",
+      "uid" : "1d235ecdd539f405",
+      "parentUid" : "9a9b644cc0e399ad2cf2b7e618d060e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649776304168,
+        "stop" : 1649776305543,
+        "duration" : 1375
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testEquilateralTriangle()",
+      "uid" : "671c9a021c4ca63a",
+      "parentUid" : "9a9b644cc0e399ad2cf2b7e618d060e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649776305547,
+        "stop" : 1649776306969,
+        "duration" : 1422
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testObtuseIsoscelesTriangle()",
+      "uid" : "a7722c7c00543d32",
+      "parentUid" : "9a9b644cc0e399ad2cf2b7e618d060e2",
+      "status" : "failed",
+      "time" : {
+        "start" : 1649776306971,
+        "stop" : 1649776308380,
+        "duration" : 1409
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9a9b644cc0e399ad2cf2b7e618d060e2"
+  } ]
+}

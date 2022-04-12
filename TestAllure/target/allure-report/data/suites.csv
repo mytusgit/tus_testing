@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Apr 13 00:11:42 YAKT 2022","Wed Apr 13 00:11:44 YAKT 2022","1433","","TestTriangle","","TestTriangle","testRightScaleneTriangle","testRightScaleneTriangle()",""
+"passed","Wed Apr 13 00:11:40 YAKT 2022","Wed Apr 13 00:11:42 YAKT 2022","2453","","TestTriangle","","TestTriangle","testEmptyField","testEmptyField()",""
+"passed","Wed Apr 13 00:11:45 YAKT 2022","Wed Apr 13 00:11:46 YAKT 2022","1422","","TestTriangle","","TestTriangle","testEquilateralTriangle","testEquilateralTriangle()",""
+"failed","Wed Apr 13 00:11:46 YAKT 2022","Wed Apr 13 00:11:48 YAKT 2022","1409","","TestTriangle","","TestTriangle","testObtuseIsoscelesTriangle","testObtuseIsoscelesTriangle()",""
+"passed","Wed Apr 13 00:11:44 YAKT 2022","Wed Apr 13 00:11:45 YAKT 2022","1375","","TestTriangle","","TestTriangle","testNotExistTriangle","testNotExistTriangle()",""

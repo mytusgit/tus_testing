@@ -1,0 +1,77 @@
+{
+  "uid" : "1b40980520f8c5a3",
+  "name" : "testEmptyField()",
+  "fullName" : "TestTriangle.testEmptyField",
+  "historyId" : "8b736a14ae14d90f7600e3b1b951a503",
+  "time" : {
+    "start" : 1649776300181,
+    "stop" : 1649776302634,
+    "duration" : 2453
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "fc2cbd2e85b437ab",
+      "name" : "Attachment Screenshot",
+      "source" : "fc2cbd2e85b437ab.png",
+      "type" : "image/png",
+      "size" : 66753
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:TestTriangle]/[method:testEmptyField()]"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-D5VLHENF"
+  }, {
+    "name" : "thread",
+    "value" : "14752@LAPTOP-D5VLHENF.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "TestTriangle"
+  }, {
+    "name" : "testClass",
+    "value" : "TestTriangle"
+  }, {
+    "name" : "testMethod",
+    "value" : "testEmptyField"
+  }, {
+    "name" : "suite",
+    "value" : "TestTriangle"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1b40980520f8c5a3.json",
+  "parameterValues" : [ ]
+}

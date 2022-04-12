@@ -1,0 +1,51 @@
+[ {
+  "uid" : "83624b3f3dc22f5a",
+  "name" : "testRightScaleneTriangle()",
+  "time" : {
+    "start" : 1649776302730,
+    "stop" : 1649776304163,
+    "duration" : 1433
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b40980520f8c5a3",
+  "name" : "testEmptyField()",
+  "time" : {
+    "start" : 1649776300181,
+    "stop" : 1649776302634,
+    "duration" : 2453
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "671c9a021c4ca63a",
+  "name" : "testEquilateralTriangle()",
+  "time" : {
+    "start" : 1649776305547,
+    "stop" : 1649776306969,
+    "duration" : 1422
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a7722c7c00543d32",
+  "name" : "testObtuseIsoscelesTriangle()",
+  "time" : {
+    "start" : 1649776306971,
+    "stop" : 1649776308380,
+    "duration" : 1409
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d235ecdd539f405",
+  "name" : "testNotExistTriangle()",
+  "time" : {
+    "start" : 1649776304168,
+    "stop" : 1649776305543,
+    "duration" : 1375
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
